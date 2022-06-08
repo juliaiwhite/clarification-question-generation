@@ -35,7 +35,7 @@ class QuestionAskingModel():
         task = tasks.setup_task(model_args)
         captions_dict = task.target_dictionary
 
-        self.captioner_model = checkpoint_utils.load_model_ensemble(model_args.path.split(':'), task=task)[0][0]
+        self.captioner_model = checkpoint_utils.load_model_ensemble([model_args.path], task=task)[0][0]
 
         self.captioner_model.make_generation_fast_(
             beamable_mm_beam_size=None if model_args.no_beamable_mm else model_args.beam,
