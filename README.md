@@ -1,5 +1,4 @@
-# clarification-question-generation
-## This code corresponds to the EMNLP 21 paper "Open-domain clarification question generation without question examples"
+# Clarification Question Generation
 
 To use this repo...
 - Create a conda environment with `conda env create -f environment.yml`.
